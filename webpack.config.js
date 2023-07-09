@@ -8,18 +8,15 @@ module.exports = {
     },
     port: 3000
   },
+  devtool: 'inline-source-map',
   entry: './src/index.js',
   module: {
     rules: [
       {
         exclude: /node_modules/,
-        test: /\.(jsx?)$/,
+        test: /\.([jt]sx?)$/,
         use: ['babel-loader']
       },
-      {
-        test: /\.(tsx?)$/,
-        use: ['ts-loader']
-      }
     ]
   },
   output: {
